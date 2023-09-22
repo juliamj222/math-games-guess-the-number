@@ -18,25 +18,27 @@ async function start() {
   process.exit();}
   else {console.log('Let\'s start!')}  
 
-  async function getANumber()   {
-    let randomNumber=Math.floor(Math.random()*100);
-    let guess= await ask (`Is your number ${randomNumber}, higher or lower? \n yup \nH \nL `)
+  async function getARandomNumber(min, max)   {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return randomNumber=Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  getARandomNumber(1,100)
+
+    let guess= await ask (`I think your number is ${randomNumber}. Is this right? Is your number  higher or lower? \n (R) - Right) \n (H) - Higher \n (L) - Lower `)
     
-    console.log(`You entered: ${guess}`);
-    if (guess==='yup') {console.log('Yay! I solved it!')
+    
+    if (guess.toLowerCase()==='r') {console.log('Yay! I solved it!\nEnd of the game. \nStart over if you want to play again!')
     process.exit();
-  }
-
-    else {console.log('Ok, let me think...')
+  } else if (guess.toLowerCase()==='h') {console.log('Higher')
+  process.exit();
+} else if (guess.toLowerCase()==='l') {console.log('Lower')
+process.exit();
+}
+    else {console.log('Please, answer \n (R) - Right) \n (H) - Higher \n (L) - Lower.')
   
-    process.exit();}  
+   process.exit();
+  }  
   }
-
-  getANumber()
-
-
-  
-  }
-
 
 
