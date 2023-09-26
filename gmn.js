@@ -15,7 +15,7 @@ async function start() {
 
 console.log("Let's play a game where you (human) make up a number, and I (computer) try to guess it.");
 
-let secretNumber = await ask("What is your secret number?\nI won't peek, I promise...\n");
+let secretNumber = await ask("What is your secret number?\nWrite one number between 1-100.\nI won't peek, I promise...\n");
 console.log('You entered: ' + secretNumber);
 
   if (secretNumber < 0 || secretNumber > 100 || isNaN(secretNumber)) {
@@ -47,7 +47,7 @@ randomNumber = getARandomNumber(min, max);
     console.log('You said that your number is lower! Let me think...');
     max = randomNumber - 1;
     randomNumber = getARandomNumber(min, max);
-    
+
     } else {
     console.log('Please, answer (R) - Right, (H) - Higher, or (L) - Lower.');
     }
