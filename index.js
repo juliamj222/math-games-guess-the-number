@@ -26,6 +26,7 @@ async function start() {
   }
 }
 // ? Guess My Number (using educated guesses instead of random guesses)
+
 async function guessMyNumber() {
   //player reads directions and inputs a number
   console.log("Let's play a game where you (human) make up a number, and I (computer) try to guess it.");
@@ -51,7 +52,7 @@ async function guessMyNumber() {
   
       if (guess === 'r') {
   console.log('Yay! I solved it!\nEnd of the game. \nStart over if you want to play again!')
-  process.exit();
+  process.exit(); //exit the game
   
       } else if (guess === 'h') {
   console.log('You said that your number is higher! Let me think...');
@@ -77,6 +78,7 @@ async function guessMyNumber() {
   }
 
 // ? Reverse Game 
+
 async function reverseGuessMyNumber() {
 //player reads directions, computer generates a number, player guesses a number
     console.log("Let's play a game!!\nI will think of a number between 1 and 100, and you will try to guess it.");
@@ -97,7 +99,7 @@ async function reverseGuessMyNumber() {
             console.log('Please, make sure to input a number between 1-100!');}
     
         else if (parseInt(numberGuess)===solution)
-            {console.log(`Attempt Number ${attempts}.\nYou guessed ${numberGuess} and you were right! \nYou won the game!\nGame Over, start over to try again!\n`); process.exit(); 
+            {console.log(`Attempt Number ${attempts}.\nYou guessed ${numberGuess} and you were right! \nYou won the game!\nGame Over, start over to try again!\n`); process.exit(); //exit the game
         }            
         else if (parseInt(numberGuess)<solution)
             {console.log(`Attempt Number ${attempts}.\nYou guessed ${numberGuess} and the answer is a higher number!`); 
