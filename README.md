@@ -1,3 +1,5 @@
+# Math Games: Guess The Number
+
 ```
 $ node index.js
 Please think of a number between 1 and 100 (inclusive).
