@@ -28,7 +28,6 @@
 
 **And** guesses a new number within the modified range
 
-Given the example above the computer now guesses between 42 and 100
 
 ## Let the computer win
 
