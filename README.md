@@ -1,22 +1,5 @@
 # Math Games: Guess The Number
 
-```
-$ node index.js
-Please think of a number between 1 and 100 (inclusive).
-I will try to guess it.
-
-Is it... 50? N
-Is it higher (H), or lower (L)? H
-Is it... 75? N
-Is it higher (H), or lower (L)? L
-Is it... 63? N
-Is it higher (H), or lower (L)? H
-Is it... 69? N
-Is it higher (H), or lower (L)? L
-Is it... 66? Y
-Your number was 66!
-```
-
 # Stories
 
 ## Pick a number, any number
@@ -26,16 +9,6 @@ Your number was 66!
 **Then** the computer asks the player if their number is a random number between 1 and 100
 
 **And** waits for an answer, which it stores as a variable
-
-## Let the computer win
-
-**Given** the computer has guessed a number
-
-**When** the player responds "yes" (or "y")
-
-**Then** the game exits with a victory message.
-
-> e.g. `Your number was XX!`
 
 ## The computer guessed wrong
 
@@ -57,7 +30,15 @@ Your number was 66!
 
 Given the example above the computer now guesses between 42 and 100
 
+## Let the computer win
 
+**Given** the computer has guessed a number
+
+**When** the player responds "yes" (or "y")
+
+**Then** the game exits with a victory message.
+
+> e.g. `Your number was XX!`
 
 ## Role Reversal!
 
